@@ -1,0 +1,22 @@
+---
+title: "README"
+format: html
+---
+
+## XGBOOST RESULTS
+
+
+```{python}
+import pandas as pd
+from IPython.display import Markdown
+
+results = pd.read_csv("forecast_ppa_2026.csv")
+
+top = (results.sort_values("pred_ppa_2026", ascending=False)  
+         .head(25)
+         .round(3)
+         .reset_index(drop=True))
+top.index += 1  
+
+Markdown(top.to_markdown()) 
+```
