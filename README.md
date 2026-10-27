@@ -1,6 +1,8 @@
 # README
 
 
+
+These are the final results from the XGBoost model we ran. The final output is the top 25 receivers for this upcoming season.
 ## XGBOOST RESULTS
 
 ``` python
